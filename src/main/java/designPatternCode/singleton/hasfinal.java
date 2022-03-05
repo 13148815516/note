@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException;
  * 2.使用field去访问到原本的单例对象。
  * 3.使用set方法把新创建的单例对象赋值给原本的对象。
  * 4.查看是否能赋值成功。
- *
+ * 1
  */
 public class hasfinal {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
