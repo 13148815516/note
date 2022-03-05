@@ -382,22 +382,7 @@ Dubbo 是一款国产的 RPC 框架，由阿里开源。相关阅读：
 * [Docker 基本概念解读](./docs/tools/docker/docker-intro.md)
 * [Docker从入门到上手干事](./docs/tools/docker/docker-in-action.md)
 
-## 关于作者
+## 其他工具
 
-* [个人介绍 Q&A](https://javaguide.cn/about-the-author/)
-* [我曾经也是网瘾少年](https://javaguide.cn/about-the-author/internet-addiction-teenager/)
-* [入职培训一个月后的感受](https://javaguide.cn/about-the-author/feelings-after-one-month-of-induction-training/)
-* [从毕业到入职半年的感受](https://javaguide.cn/about-the-author/feelings-of-half-a-year-from-graduation-to-entry/)
-* [某培训机构盗我文章做成视频还上了B站热门](https://javaguide.cn/about-the-author/my-article-was-stolen-and-made-into-video-and-it-became-popular/)
-
-## 公众号
-
-如果大家想要实时关注我更新的文章以及分享的干货的话，可以关注我的公众号。
-
-**《Java面试突击》:** 由本文档衍生的专为面试而生的《Java面试突击》PDF 版本[公众号](#公众号)后台回复 **"面试突击"** 即可免费领取！
-
-![我的公众号](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/167598cd2e17b8ec.png)
-
-![](https://img-blog.csdnimg.cn/7af97d4dccdb4123a541f336a107ca86.png)
-
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3a2d826918a44bcbaa8d9272db3ad7d2~tplv-k3u1fbpfcp-watermark.image)
+### Markdown指导
+https://www.runoob.com/markdown/md-tutorial.html
