@@ -21,7 +21,7 @@ tag:
 ## 代码与设计实现
 ### 类结构
 - 使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。  
-![单例结构图](./pictures/singletonStructureDiagram.png)
+![单例结构图](./images/singletonStructureDiagram.png)
 
 ### 如何实现
 - 私有构造函数保证了不能通过构造函数来创建对象实例，只能通过公有静态函数返回唯一的私有静态变量。

@@ -1,9 +1,9 @@
----
-title: 类和类的关系 6钟 
+----
+title: 类和类的关系 6种   
 category: UML  
 tag:
   - 基础
----
+----
 
 * 泛化关系/继承（generalization）  
     - 三角空心+实线，  
@@ -44,4 +44,4 @@ tag:
       - 身体和手，公司和部门，contains a
 泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖 
 
-![类和类的关系UML图](./picture/ClassRelationshipUML.png)
+![类和类的关系UML图](./images/ClassRelationshipUML.png)
