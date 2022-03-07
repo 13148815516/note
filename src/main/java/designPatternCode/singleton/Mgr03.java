@@ -13,6 +13,7 @@ public class Mgr03 {
 
     public static Mgr03 getInstance() {
         if (INSTANCE == null) {
+            // 睡后容易判断为空，产生新实例
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {

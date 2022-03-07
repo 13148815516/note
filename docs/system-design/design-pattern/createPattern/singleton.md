@@ -49,11 +49,30 @@ if (INSTANCE == null) {INSTANCE = new Mgr03();}
      - 公共静态方法
      - 实例若为空就创建实例
      
-- [懒汉式-线程安全](/src/main/java/designPatternCode/singleton/Mgr03.java)
+- [懒汉式-线程安全](/src/main/java/designPatternCode/singleton/Mgr04.java)
   - 关键：懒汉式基础上，对getInstance加synchronized关键字
   - 优点：解决线程安全性
-  - 缺点：性能慢，串行    
+  - 缺点：性能慢，串行，不建议食用    
 注：线程问题发生条件  
 1.多线程的环境下  
 2.必须有共享资源  
 3.对资源进行非原子性操作  
+
+- [懒汉式-双层判断](/src/main/java/designPatternCode/singleton/Mgr06.java)
+  - 关键：懒汉式基础上，对涉及多线程的同步代码块加synchronized关键字，且块内再次判断
+  - 优点：解决线程安全性
+  - 缺点：写法复杂，需要同步代码块内外都判断，不建议食用    
+
+- [懒汉式-静态内部类方式](/src/main/java/designPatternCode/singleton/Mgr07.java)
+  - 关键：当 Singleton 类被加载时，静态内部类 SingletonHolder 没有被加载进内存。  
+        只有当调用 `getUniqueInstance()` 方法从而触发 `SingletonHolder.INSTANCE` 时 SingletonHolder 才会被加载，此时初始化 INSTANCE 实例，  
+        并且 JVM 能确保 INSTANCE 只被实例化一次  
+  - 优点：懒加载，线程安全
+  - 缺点：若构造函数内出错，则不会产生实例
+  
+- [懒汉式-枚举](/src/main/java/designPatternCode/singleton/Mgr08.java)
+  - 关键：当 Singleton 类被加载时，静态内部类 SingletonHolder 没有被加载进内存。  
+        只有当调用 `getUniqueInstance()` 方法从而触发 `SingletonHolder.INSTANCE` 时 SingletonHolder 才会被加载，此时初始化 INSTANCE 实例，  
+        并且 JVM 能确保 INSTANCE 只被实例化一次  
+  - 优点：懒加载，线程安全，防止反序列化，effective java推荐方式
+  - 缺点：无

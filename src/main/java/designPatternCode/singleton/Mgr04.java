@@ -7,11 +7,14 @@ package designPatternCode.singleton;
  * 可以通过synchronized解决，但也带来效率下降，不推荐
  */
 public class Mgr04 {
+    // 持有私有静态实例，防止被引用，此处赋值为null，目的是实现延迟加载
     private static Mgr04 INSTANCE;
-
+    // 私有构造方法，防止被实例化
     private Mgr04() {
     }
-
+    /* 静态工程方法，创建实例
+    * 每次看有没有锁，没有就加锁
+    * */
     public static synchronized Mgr04 getInstance() {
         if (INSTANCE == null) {
             try {

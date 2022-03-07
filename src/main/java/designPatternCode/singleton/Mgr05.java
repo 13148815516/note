@@ -13,6 +13,7 @@ public class Mgr05 {
     }
 
     public static Mgr05 getInstance() {
+        // 判断和下面加了同步锁的同步代码块不是原子，也有线程安全问题
         if (INSTANCE == null) {
             //妄图通过减小同步代码块的方式提高效率，然后不可行
             synchronized (Mgr05.class) {

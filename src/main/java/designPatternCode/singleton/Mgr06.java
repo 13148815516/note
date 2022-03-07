@@ -1,10 +1,11 @@
 package designPatternCode.singleton;
 
 /**
- * lazy loading
+ * lazy loading 双层判断单例写法，完美之一，但没必要，不推荐
  * 也称懒汉式
  * 虽然达到了按需初始化的目的，但却带来线程不安全的问题
  * 可以通过synchronized解决，但也带来效率下降
+ * 同步代码块里再判断是否为空
  */
 public class Mgr06 {
     private static volatile Mgr06 INSTANCE; //JIT
@@ -13,9 +14,12 @@ public class Mgr06 {
     }
 
     public static Mgr06 getInstance() {
+        // 大部分走第一个判断，直接返回单例
         if (INSTANCE == null) {
-            //双重检查
+            // 加同步锁的同步代码块里面再次判断
+            // 双重检查
             synchronized (Mgr06.class) {
+                // 第一次多个线程时判断
                 if(INSTANCE == null) {
                     try {
                         Thread.sleep(1);
