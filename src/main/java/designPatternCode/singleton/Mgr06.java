@@ -8,6 +8,7 @@ package designPatternCode.singleton;
  * 同步代码块里再判断是否为空
  */
 public class Mgr06 {
+    // 加volatile，防止指令重拍问题，可能在实例前初始化
     private static volatile Mgr06 INSTANCE; //JIT
 
     private Mgr06() {

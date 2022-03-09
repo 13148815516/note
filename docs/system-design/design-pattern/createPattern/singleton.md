@@ -76,3 +76,6 @@ if (INSTANCE == null) {INSTANCE = new Mgr03();}
         并且 JVM 能确保 INSTANCE 只被实例化一次  
   - 优点：懒加载，线程安全，防止反序列化，effective java推荐方式
   - 缺点：无
+  
+- 工作中常用方法：
+  - 使用spring的bean工厂产生单例
